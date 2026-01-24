@@ -11,7 +11,7 @@ if(isset($_POST['update']))
     $email= $_POST['email'];
 
 
-    $sql = "UPDATE user set name=:name, surname=:surname, email=:email
+    $sql = "UPDATE users set name=:name, surname=:surname, email=:email
     where id=:id";
 
     $prep= $conn->prepare($sql);
