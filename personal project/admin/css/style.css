@@ -64,3 +64,17 @@ body {
 html, body{
     background-color: #e4dedeff;
 }
+
+.button-secondary {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #555;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.button-secondary:hover {
+    background: #333;
+}
