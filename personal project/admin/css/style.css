@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #fffefe;
+    background: linear-gradient(to right, #76ebd7, #ee97ff);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +10,7 @@ body {
 
 
 .container {
-    background-color: #ffffff96;
+    background: white;
     padding: 30px;
     width: 350px;
     border-radius: 10px;
@@ -21,7 +21,7 @@ body {
 .container h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #000000;
 }
 
 
@@ -38,7 +38,7 @@ body {
 .container button {
     width: 100%;
     padding: 12px;
-    background-color: #333;
+    background-color: #375bf7;
     color: #fff;
     border: none;
     border-radius: 5px;

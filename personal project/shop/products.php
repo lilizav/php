@@ -1,4 +1,4 @@
-<?php
+<?php 
 require 'config.php';
 
 $stmt = $conn->prepare("SELECT * FROM products ORDER BY id DESC");
@@ -22,42 +22,50 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 </nav>
 
+<div style="text-align:center; margin-top:20px;">
+    <a href="cart.php">View Cart 🛒</a>
+</div>
+
 <h1 class="title">Our Products</h1>
 
 <div class="product-container">
 
 <?php if (!empty($products)): ?>
-
+    
     <?php foreach ($products as $product): ?>
+        
         <div class="card">
 
-            <!-- Product Image -->
-            <img 
-                src="images/<?= htmlspecialchars($product['image']); ?>" 
-                alt="<?= htmlspecialchars($product['name']); ?>" 
-                class="product-image"
-            >
+            <!-- PRODUCT IMAGE -->
+            <img src="images/<?= htmlspecialchars($product['image']); ?>" 
+                 class="product-image"
+                 alt="<?= htmlspecialchars($product['name']); ?>">
 
-            <!-- Product Info -->
             <h2><?= htmlspecialchars($product['name']); ?></h2>
-            <p class="price">$<?= number_format($product['price'], 2); ?></p>
-            <p><?= htmlspecialchars($product['description']); ?></p>
 
-            <!-- Add To Cart Button -->
-            <button 
-                onclick="addToCart('<?= htmlspecialchars($product['name']); ?>', <?= $product['price']; ?>)">
+            <p class="price">
+                $<?= number_format($product['price'], 2); ?>
+            </p>
+
+            <p>
+                <?= htmlspecialchars($product['description']); ?>
+            </p>
+
+            <button onclick="addToCart('<?= htmlspecialchars($product['name']); ?>', <?= $product['price']; ?>)">
                 Add to Cart
             </button>
 
         </div>
+
     <?php endforeach; ?>
 
 <?php else: ?>
-    <p style="text-align:center;">No products available.</p>
+    <p>No products available.</p>
 <?php endif; ?>
 
 </div>
 
 <script src="js/cart.js"></script>
+
 </body>
 </html>
