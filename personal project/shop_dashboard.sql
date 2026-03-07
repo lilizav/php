@@ -66,11 +66,13 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `price`, `description`, `created_at`, `image`) VALUES
-(1, 'Belt', 10.00, 'Leather belt', '2026-02-28 12:23:24', 'belt.jpg'),
-(2, 'Dress', 30.00, 'Silk Dress', '2026-02-28 12:23:24', 'dress.jpg'),
-(3, 'Jeans', 25.00, 'Blue Jeans', '2026-02-28 12:23:24', 'jeans.jpg'),
-(4, 'Shirt', 15.00, 'Cotton Shirt', '2026-02-28 12:23:24', 'shirt.jpg');
+INSERT INTO `products` (`name`, `price`, `description`, `created_at`, `image`) VALUES
+('Belt', 10.00, 'Leather belt', NOW(), 'belt.jpg'),
+('Dress', 30.00, 'Silk Dress', NOW(), 'dress.jpg'),
+('Jeans', 25.00, 'Blue Jeans', NOW(), 'jeans.jpg'),
+('Shirt', 15.00, 'Cotton Shirt', NOW(), 'shirt.jpg'),
+('Bag', 30.00, 'Pink & White Bag', NOW(), 'bag.jpg');
+
 
 -- --------------------------------------------------------
 

@@ -63,6 +63,12 @@ button:hover {
     margin-left: 15px;
 }
 
+.navbar div{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
 /* CART PAGE */
 .cart-wrapper {
     display: flex;
@@ -137,4 +143,95 @@ button:hover {
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+
+
+/* Base font and background */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #76ebd7, #ee97ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Form container */
+.container {
+    background: white;
+    padding: 30px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Form heading */
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+/* Inputs */
+.container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Buttons */
+.container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #375bf7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.container button:hover {
+    background-color: #555;
+}
+
+/* Messages */
+.message {
+    margin-top: 10px;
+    color: red;
+    text-align: center;
+}
+
+.success {
+    margin-top: 10px;
+    color: green;
+    text-align: center;
+}
+
+/* Page background override */
+html, body {
+    background-color: #e4dedeff;
+}
+
+/* Secondary buttons / links */
+.button-secondary {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #555;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.button-secondary:hover {
+    background: #333;
 }
